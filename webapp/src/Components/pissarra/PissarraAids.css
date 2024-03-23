@@ -1,0 +1,113 @@
+.watcherCount {
+    position: absolute;
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    top: 15px;
+    right: 15px;
+
+    background-color: lightblue;
+    color: white;
+}
+
+@media only screen and (min-device-width: 768px) {
+    .watcherCount {
+        right: auto;
+        left: 15px;
+    }
+}
+
+.innerWatcherCount {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 40px;
+}
+
+.ajuntament {
+    position: absolute;
+    font-weight: bold;
+
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    background-color: lightgreen;
+    color: white;
+}
+
+.ajuntament.top {
+    top: 30px;
+    left: 45%;
+}
+
+.ajuntament.bottom {
+    bottom: 30px;
+    left: 45%;
+    transform: rotate(180deg);
+}
+
+.ajuntament.left {
+    left: 30px;
+    top: 50%;
+    transform: rotate(-90deg);
+}
+
+.ajuntament.right {
+    right: 12%;
+    top: 50%;
+    transform: rotate(90deg);
+}
+
+.ajuntament.right.extended {
+    right: 40%;
+}
+
+.ajuntament.top.extended {
+    left: 40%;
+}
+
+.ajuntament.bottom.extended {
+    left: 30%;
+}
+
+@media only screen and (max-device-width: 768px) {
+
+    .ajuntament.top {
+        top: 30px;
+        left: 45%;
+    }
+    
+    .ajuntament.bottom {
+        bottom: 30px;
+        left: 45%;
+    }
+    
+    .ajuntament.left {
+        left: 5px;
+        top: 40%;
+        transform: rotate(-90deg);
+    }
+    
+    .ajuntament.right {
+        right: 5px;
+        top: 40%;
+        transform: rotate(90deg);
+    }
+    
+    .ajuntament.bottom.extended {
+        bottom: 42%;
+        left: 32%;
+        transform: rotate(180deg);
+    }
+    
+    .ajuntament.left.extended {
+        top: 30%;
+    }
+    
+    .ajuntament.right.extended {
+        top: 30%;
+        right: -10%;
+    }
+   
+}

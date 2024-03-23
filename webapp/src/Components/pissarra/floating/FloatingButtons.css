@@ -1,0 +1,112 @@
+.floating {
+    z-index: 999;
+}
+
+.floating-button.hidden {
+    display: none;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+    position: fixed;
+    left: 20%;
+    right: auto;
+    bottom: 0;
+
+    width: 50%;
+
+    pointer-events: none;
+}
+
+.buttons-container.dangerous {
+    left: 20%;
+    right: auto;
+    bottom: auto;
+}
+
+.floating-button {
+    pointer-events: auto;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    padding: 30px;
+    font-size: 28px;
+    border-radius: 10px 10px 0 0;
+
+    backdrop-filter: blur(5px);
+    background-blend-mode: overlay;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.buttons-container.dangerous .floating-button {
+    border-radius: 0 0 10px 10px;
+}
+
+@media only screen and (max-device-width: 768px) {
+    .buttons-container {
+        height: 60%;
+        width: auto;
+        flex-direction: column;
+    
+        left: auto;
+        right: 0;
+        bottom: auto;
+    }
+
+    .buttons-container.dangerous {
+        left: 0;
+        right: auto;
+        bottom: auto;
+    }
+
+    .floating-button {
+        padding: 20px;
+        font-size: 16px;
+        border-right: 0;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .buttons-container.dangerous .floating-button {
+        border-left: 0;
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+.floating-button.delete {
+    background-color: #ffbbbb;
+}
+
+.floating-button.notify {
+    background-color: #fff4c3;
+}
+
+.floating-button.swap {
+    background-color: #bbc5ff;
+}
+
+.floating-button.fitxar {
+    background-color: #ffffff;
+}
+
+.floating-button.notify.notified {
+    background-color: #b88066;
+}
+
+.floating-button.notify.notified .bell {
+    animation: shake 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    33% { transform:  rotate(-25deg); }
+    66% { transform:  rotate(25deg); }
+    100% { transform: rotate(0deg); }
+}

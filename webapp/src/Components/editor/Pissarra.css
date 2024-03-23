@@ -1,0 +1,165 @@
+.pissarra-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+    font-size: 48px;
+    transition: opacity 3s linear;
+    position: absolute;
+    top: -250px;
+}
+
+.info img {
+	position: relative;
+    top: 100px;
+}
+
+.rect {
+    position: absolute;
+    transform-origin: 0 0; /* special for SVG */
+
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.rect.highlighted {
+    background-color: rgba(255, 255, 0, 0.2) !important;
+    border: solid 2px rgb(255, 174, 0) !important;
+}
+
+.rect.rotated {
+    flex-direction: column;
+}
+
+.rect.rotated .text {
+    display: flex;
+    align-items: center;
+}
+
+.selectable.selected .rect {
+    z-index: 999;
+}
+
+.selectable.tard .rect {
+    color: red;
+}
+
+.selectable.aviat .rect {
+    color: red;
+}
+
+.selectable.tard .rect.rotated::before {
+    top: auto;
+    bottom: 25px;
+    right: 0px;
+    left: auto;
+}
+
+.selectable.aviat .rect.rotated::before {
+    top: auto;
+    bottom: 25px;
+    right: 0px;
+    left: auto;
+}
+
+.selectable.disabled .rect {
+    background-color: rgb(255, 225, 225) !important;
+}
+
+.aux-text {
+    position: absolute;
+    transform-origin: 0 0; /* special for SVG */
+
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+.aux-text .text {
+    transform-origin: 0 50%; /* special for SVG */
+}
+
+.rect .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-stretch: ultra-condensed;
+    white-space: pre;
+
+    flex-grow: 4;
+}
+
+.rect .altura {
+    font-size: 14px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-stretch: ultra-condensed;
+    white-space: pre;
+
+    border-radius: 1px;
+
+    flex-grow: 1;
+    padding: 0 2px;
+
+    display: flex;
+    align-items: center;
+}
+
+.selected .rect {
+    background-color: rgba(255, 255, 0, 0.2) !important;
+    outline: solid gold 1px !important;
+}
+
+.rect.toSwap {
+    background-color: rgba(0, 0, 255, 0.2) !important;
+    outline: solid #2859A8 1px !important;
+}
+
+.altura.Falca { background-color: #44CFCB; color: black; }
+.altura.Crossa { background-color: #4EA5D9; color: white; }
+.altura.Baix { background-color: #2A4494; color: white; }
+.altura.Lateral { background-color: #224870; color: white; }
+.altura.Rengla { background-color: #122C34; color: white; }
+
+.individual-display {
+    z-index: 99999;
+    font-size: 8px;
+    border-radius: 5px;
+    padding: 2px 4px;
+    background-color: darkseagreen;
+    color: white;
+}
+
+.individual-displays {
+    position: absolute;
+    display: flex;
+    gap: 2px;
+}
+
+.individual-displays.relative {
+    align-items: flex-end;
+
+    top: -5px;
+    right: -5px;
+}
+
+.individual-displays.relative.rotated {
+    top: auto;
+    bottom: -5px;
+
+    rotate: 90deg;
+}

@@ -1,0 +1,126 @@
+.botons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 24px;
+}
+
+#borrar-container, #undo-container, #exportar-container {
+    display: flex;
+}
+
+.boto {
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    user-select: none;
+}
+
+.boto.selected {
+    outline: solid 2px darkorange;
+}
+
+.boto-undo {
+    background-color: rgba(200, 87, 0, 0.2);
+}
+
+.boto-save {
+    background-color: rgba(0, 0, 255, 0.2);
+}
+
+.boto-assist {
+    background-color: rgba(255, 175, 0, 0.2);
+    position: relative;
+}
+
+.boto-assist.withTarget::after {
+    /* Notification-style point */
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    background-color: lightcoral;
+    border-radius: 50%;
+    display: block;
+}
+
+.boto-chat {
+    background-color: rgba(234, 0, 255, 0.2);
+}
+
+.boto-pestanya {
+    background-color: rgba(234, 0, 255, 0.2);
+}
+
+.boto-ajuntament {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+.boto-nova-persona {
+    background-color: rgba(255, 175, 0, 0.2);
+}
+
+.boto.disabled {
+    filter: grayscale(1);
+}
+
+#controller-container {
+    position: fixed;
+    right: 0;
+    background-color: rgba(0, 0, 255, 0.05);
+    width: 10%;
+    height: 100%;
+
+    transition: all .1s linear;
+    z-index: 999;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background-blend-mode: overlay;
+
+    user-select: none;
+}
+
+#controller-container .botons {
+    flex-direction: column;
+}
+
+#controller-container.extended {
+    width: 40%;
+    height: 100%;
+}
+
+.swiper-slide .castellers-container {
+    opacity: 0;
+    transition: opacity .1s linear;
+}
+
+.swiper-slide.swiper-slide-active .castellers-container.activa {
+    opacity: 1;
+}
+
+@media only screen and (max-device-width: 768px) {
+    #controller-container {
+        bottom: 0;
+        width: 100%;
+        
+        border-radius: 30px 30px 0 0;
+        border: 0;
+    
+        backdrop-filter: blur(5px);
+        background-blend-mode: overlay;
+
+        height: 15%;
+    }
+  
+    #controller-container .botons {
+        flex-direction: row;
+    }
+
+    #controller-container.extended {
+        width: 100%;
+        height: 40%;
+    }
+}

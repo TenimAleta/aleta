@@ -1,0 +1,95 @@
+{
+    "latest": "2.18.3",
+    "2.18.3": {
+        "novetats": [
+            "Hem arreglat alguns errors típics.",
+            "Formularis amb pagaments millorats i tiquets QR."
+        ]
+    },
+    "2.15.3": {
+        "novetats": [
+            "Hem afegit QRs pels tiquets de pagament",
+            "Els servidors ara no es saturaran quan hi hagi molta gent a l'assaig"
+        ]
+    },
+    "2.14.1": {
+        "novetats": [
+            "Ara es baixa tot l'assaig de cop per evitar quedar-se sense pinyes quan no hi ha cobertura."
+        ]
+    },
+    "2.13.5": {
+        "novetats": [
+            "Les pinyes es carreguen més ràpid",
+            "Millores quan perds la connexió a internet"
+        ]
+    },
+    "2.12.10": {
+        "novetats": [
+            "Ja no cal tancar i tornar a obrir per recarregar les proves",
+            "Caixes blanques sobre text blanc arreglat",
+            "Capacitat de pujar comprovants de pagament als formularis"
+        ]
+    },
+    "2.12.1": {
+        "novetats": [
+            "ACTUALITZACIÓ OBLIGATÒRIA. L'app no anirà si no s'actualitza."
+        ]
+    },
+    "2.10.3": {
+        "novetats": [
+            "Millores en el servidor.",
+            "Evitem que es pengi amb noves millores."
+        ]
+    },
+    "2.9.5": {
+        "novetats": [
+            "Grans millores per la part de tècnica.",
+            "És més ràpid marcar l'assistència."
+        ]
+    },
+    "2.8.5": {
+        "novetats": [
+            "Hem introduït folres i manilles!"
+        ]
+    },
+    "2.6.10": {
+        "novetats": [
+            "L'Aleta ara va 40 cops més ràpida!",
+            "Hem trobat un error que feia que l'app anés molt lenta.",
+            "L'hem arreglat i ara va molt més ràpida."
+        ]
+    },
+    "2.6.3": {
+        "novetats": [
+            "Hem trobat un error al codi que saturava els servidors.",
+            "L'hem arreglat i ara haurien de tenir més capacitat per aguantar més persones."
+        ]
+    },
+    "2.5.1": {
+        "novetats": [
+            "Formularis Aleta: ara hi ha la possibilitat de respondre formularis directament des de l'app.",
+            "Podràs veure si ja has respós i podràs canviar la teva resposta.",
+            "Per defecte, el formulari serà obligatori per confirmar l'assistència a l'esdeveniment."
+        ]
+    },
+    "2.3.10": {
+        "novetats": [
+            "Ara pots fer zoom a les fotos de la pinya aprentant durant mig segon!",
+            "Arreglats problemes amb el calendari i dies amb esdeveniments de dies passats.",
+            "S'ha trobat una cal·ligrafia més bonica per a les pinyes."
+        ]
+    },
+    "2.3.2": {
+         "novetats": [
+            "ACTUALITZACIÓ OBLIGATÒRIA. L'app no anirà si no s'actualitza.",
+            "S'han canviat els servidors per uns de més segurs i ràpids."
+        ]
+    },
+    "2.2.4": {
+        "novetats": [
+            "Anirà més ràpida.",
+            "Les fotos es carregaran més ràpid.",
+            "No es penjarà."
+        ]
+    }
+}

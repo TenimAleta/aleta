@@ -1,0 +1,1 @@
+Aquí van els grups en format .json

@@ -1,0 +1,231 @@
+.assistencia-summary {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    padding: 10px 0 10px 0;
+
+    /* border: solid 1px rgba(0, 0, 0, 0.2); */
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.assistencia-summary:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.assistencia-summary .fitxats {
+    color: rgb(107, 107, 255);
+}
+
+.assistencia-summary .venen {
+    color: green;
+}
+
+.assistencia-summary .no_venen {
+    color: red;
+}
+
+.assistencia-summary .no_confirmats {
+    color: orange;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav .tab {
+    padding: 10px;
+    /* width: 100%; */
+    text-align: center;
+}
+
+nav .tab:hover {
+    cursor: pointer;
+}
+
+nav .tab.selected {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+form {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.filter {
+    flex: 8;
+    padding: 5px;
+}
+
+.reset {
+    flex: 1;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.assistents {
+    margin-top: 10px;
+}
+
+.assistent {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.assistent .nom {
+    flex: 1;
+}
+
+.assistent .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.assistent .buttons .selected button {
+    font-weight: bold;
+}
+
+.assistent:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.count {
+    border-left: solid 1px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.assistents {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content:start;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.filter-buttons div {
+    padding: 5px 10px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+}
+
+.filter-buttons div.selected {
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    box-shadow: 0px 0px;
+}
+
+.llista-perfil {
+    flex-shrink: 0;
+}
+
+.llista-perfil .perfil {
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.casteller-assistencia {
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.casteller-assistencia.Fitxat { background-color: #2859A8; color: white; }
+.casteller-assistencia.Vinc { background-color: green; color: white; }
+.casteller-assistencia.Novinc { background-color: red; color: white; }
+.casteller-assistencia.Noconfirmat { background-color: orange; color: white; }
+
+.casteller-assistencia.MockFitxat { background-color: #2859A8 !important; color: white; }
+.casteller-assistencia.MockVinc { background-color: green !important; color: white; }
+.casteller-assistencia.MockNovinc { background-color: red !important; color: white; }
+.casteller-assistencia.MockNoconfirmat { background-color: orange !important; color: white; }
+
+.llista-rareses-packs {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    /* justify-content: space-around; */
+}
+
+.raresa {
+    margin: 10px 5px;
+    padding: 10px;
+    margin-top: 0px;
+    flex-shrink: 0;
+    position: relative;
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.raresa.past {
+    color: black;
+}
+
+.raresa.future {
+    color: black;
+}
+
+.raresa.highlight {
+    color: black;
+}
+
+.raresa.general {
+    color: black;
+}
+
+.raresa.past:not(.highlight)::after {
+    /* Check emoji */
+    content: "✅";
+    color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+.raresa.highlight::after {
+    /* Alert emoji */
+    content: "⚠️";
+    color: rgba(255, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+.raresa:not(.highlight):not(.past):not(.general)::after {
+    /* Cross emoji */
+    content: "❌";
+    color: rgba(255, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+.raresa .noms.toolong {
+    overflow: hidden;
+    height: 50px;
+
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent);
+}
+
+.raresa .noms.toolong.showall {
+    height: auto;
+
+    -webkit-mask-image: none;
+    mask-image: none;
+}

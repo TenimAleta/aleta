@@ -1,0 +1,125 @@
+/* EditableForm.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.form-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 1em auto;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    margin-bottom: 100px;
+}
+
+.form-container h1, 
+.form-container h2, 
+.form-container h3, 
+.form-container p {
+    color: #333;
+}
+
+.form-element-container {
+    margin: 20px 0;
+}
+
+.form-element-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-element-container input[type="text"],
+.form-element-container input[type="radio"],
+.form-element-container input[type="checkbox"],
+.form-element-container textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+.form-element-container input[type="radio"],
+.form-element-container input[type="checkbox"] {
+    width: auto;
+}
+
+.styled-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.styled-button:hover {
+    background-color: #0056b3;
+}
+
+.styled-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    color: white;
+}
+
+.input-option {
+    display: flex;
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 90%;
+    background-color: #f8f9fa;
+    align-items: center;
+    flex-direction: row;
+}
+
+.input-option:hover {
+    background-color: #eee;
+}
+
+.input-option input {
+    margin-right: 10px;
+}
+
+.confirmation-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  
+  .styled-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #6fcf9a;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+  
+  .secondary-button {
+    background-color: #6c757d;
+  }
+
+  .styled-button:hover {
+    background-color: #3b9975;
+  }
+
+  .styled-button.secondary-button:hover {
+    background-color: #44494e;
+  }

@@ -1,0 +1,124 @@
+.chat-popup {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.conversa-view {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    height: 400px;
+    max-height: 400px;
+
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+}
+
+.conversa {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 75%;
+    gap: 10px;
+}
+
+.message-container.isMine {
+    align-self: flex-end;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.message-user {
+    font-weight: bold;
+}
+
+.message-content {
+    position: relative;
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.message-container.isMine .message .message-content {
+    background-color: #187bcd;
+    color: #fff;
+}
+
+.message-date {
+    margin-top: 2px;
+    font-size: 10px;
+    color: #888;
+    text-align: right;
+}
+
+.message-container.isMine .message .message-date {
+    color: #fff;
+}
+
+.message-input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.message-input-author {
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #187bcd;
+}
+
+.date-separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.date-separator span {
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #888;
+}
